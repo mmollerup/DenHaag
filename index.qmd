@@ -1,0 +1,69 @@
+---
+title: "Disability care"
+published-title:
+date: "April 2024"
+date-format: MMMM, YYYY
+format: 
+  revealjs:
+    self-contained: true
+include-in-header: 
+  text: |
+    <style>
+      .custom-small table {
+        font-size: .5em
+      }
+    </style>
+editor: source
+---
+
+
+
+```{r}
+#| include: false
+library(tidyverse)
+```
+
+
+## Tables ([www.statisikbanken.dk](https://www.statistikbanken.dk))
+
+<br>
+
+
+::: custom-small
+
+|                | HAND01     | HAND02     | HAND03     | HAND05     | HAND06         |HAND07     |         
+| :----------    | :--------: | :--------: | :--------: | :--------: | :--------:     |:--------: |
+| Unit           | Services   | Recipients | Services   | Services   | Serv./1000 inh.| Recipients|
+| Period         | Quarter    | Quarter    | Quarter    | Year       | Quarter        | Quarter   |
+| Region         | Municip.   | DK         | DK         | Municip.   | Municip.       | Municip.  |
+| Age            | &minus;    | &#10004;   | &minus;    | &minus;    | &minus;        | &minus;   |
+| Education      | &minus;    | &#10004;   | &minus;    | &minus;    | &minus;        | &minus;   |
+| Sex            | &minus;    | &#10004;   | &minus;    | &minus;    | &minus;        | &minus;   |
+| Marital status | &minus;    | &#10004;   | &minus;    | &minus;    | &minus;        | &minus;   |
+| Target group   | &minus;    | &minus;    | &#10004;   | &minus;    | &minus;        | &minus;   |
+
+:::
+
+
+## Solution strategy
+
+::: {layout-ncol=2}
+![](Bismarck-Bolscher_400x400.png){width=40%}
+![](Bismarck-Slikkepind_400x400.png){width=40%}
+:::
+
+
+1. Sequential (HAND01 $\rightarrow$ HAND02 $\rightarrow$ $\cdots$ $\rightarrow$ HAND07) 
+2. Parallel (HAND010203050607)
+
+
+
+## Problems (some)
+
+* Different levels region (e.g. HAND01/HAND03) 
+* Different levels of period (e.g.HAND01/HAND05)
+* Correlation between services and recipients (e.g. HAND01/HAND07)
+
+
+
+
